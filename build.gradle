@@ -22,7 +22,7 @@ configurations {
 
 ext {
     jwtVersion = "0.12.3"
-    springCloudVersion = "2025.0.0"
+    springCloudVersion = "2025.1.0"
     querydslVersion = "7.1"
 }
 
