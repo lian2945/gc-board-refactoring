@@ -1,0 +1,1 @@
+docker-compose --env-file ./secrets/env/infrastructure/local.env -f docker-compose.local.yml up -d
