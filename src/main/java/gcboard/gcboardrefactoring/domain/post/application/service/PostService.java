@@ -63,7 +63,7 @@ public class PostService {
         boolean hasMore = posts.size() > cursorRequestDto.count();
 
         List<PostSummaryResponseDto> content = hasMore ? posts.subList(0, cursorRequestDto.count().intValue()) : posts;
-        return new CursorResponseDto<>(
+        return new CursorResponseDto<PostSummaryResponseDto>(
                 content,
                 content.size(),
                 !hasMore
@@ -85,7 +85,7 @@ public class PostService {
         boolean hasMore = posts.size() > cursor.count();
         List<PostSummaryResponseDto> content = hasMore ? posts.subList(0, cursor.count().intValue()) : posts;
 
-        return new CursorResponseDto<>(
+        return new CursorResponseDto<PostSummaryResponseDto>(
                 content,
                 content.size(),
                 !hasMore

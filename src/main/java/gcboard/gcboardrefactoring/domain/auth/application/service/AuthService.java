@@ -45,7 +45,6 @@ public class AuthService {
                 .password(passwordEncoder.encode(signupRequestDto.password()))
                 .profile(signupRequestDto.profile())
                 .description(signupRequestDto.description())
-                .isActive(true)
                 .build();
 
         userRepository.save(userEntity);

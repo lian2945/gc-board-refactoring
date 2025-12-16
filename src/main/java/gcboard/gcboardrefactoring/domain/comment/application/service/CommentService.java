@@ -94,7 +94,7 @@ public class CommentService {
                 .map(CommentTreeResponseDto::maskDeleted)
                 .toList();
 
-        return new CursorResponseDto<>(
+        return new CursorResponseDto<CommentTreeResponseDto>(
                 masked,
                 masked.size(),
                 !hasMore

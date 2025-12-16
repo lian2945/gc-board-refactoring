@@ -19,8 +19,14 @@ public class UserEntity extends GcBoardEntity {
     @Column(name = "nickname", nullable = false, unique = true)
     private String nickname;
 
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column(name = "profile")
     private String profile;
+
+    @Column(name = "description")
+    private String description;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false)
@@ -30,14 +36,22 @@ public class UserEntity extends GcBoardEntity {
     private Boolean isActive;
 
     @Builder
-    public UserEntity(String mail, String profile) {
+    public UserEntity(String mail, String nickname, String password, String profile, String description) {
         this.mail = mail;
+        this.nickname = nickname;
+        this.password = password;
         this.profile = profile;
+        this.description = description;
         this.role = Role.USER;
         this.isActive = true;
     }
 
     void changeRole(Role role) {
         this.role = role;
+    }
+
+    public void updateProfile(String profile, String description) {
+        this.profile = profile;
+        this.description = description;
     }
 }
