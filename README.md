@@ -269,7 +269,7 @@ npm run dev
 ## 🎥 시연 영상
 
 [YouTube 링크]
-https://www.youtube.com/watch?v=EfSraE3_Fw0
+https://youtu.be/rb-c1l2YKXU
 ---
 
 ## 📚 참고 자료
